@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+        <title>Flexbox</title>
+        <style>
+        :root {
+            --orange: rgb(255, 112, 2);
+            --aqua: rgb(4, 59, 59);
+            --darkgreen: rgb(3, 37, 3);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        main {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 140px;
+            max-width: 900px;
+            height: 400px;
+        }
+
+        .maincontainer {
+            display: flex;
+            
+        }
+
+        .maincontainer > div {
+            height: 400px;
+            width: 300px;
+        }
+
+        h2 {
+            color: white;
+            font-family: Arial, sans-serif;
+            font-stretch:extra-condensed;
+        }
+
+        .sedanbox {
+            background-color: var(--orange);
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            padding: 30px;
+        }
+
+        .suvsbox {
+            background-color: var(--aqua);
+            padding: 30px;
+        }
+
+        .luxurybox {
+            background-color: var(--darkgreen);
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding: 30px;
+        }
+
+        p {
+            --orange: rgb(255, 253, 250);
+            color: var(--orange);
+            opacity: 0.7;
+            line-height: 20px;
+            width: 180px;
+            word-wrap: break-word;
+        }
+
+        button {
+            padding: 5px 8px;
+            border-radius: 20px;
+            background-color: white;
+            width: 100px;
+            height: 30px;
+            border: none;
+            margin-top: 70px;
+            font-family: Arial, sans-serif;
+            transition: .2s ease-in-out;
+        }
+
+        button:active {
+            border: 2px solid white;
+            background-color: transparent;
+            cursor: pointer;
+            color: white !important;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+          <a href="grid.html"
+             style="width: 60px; 
+                    height: 30px; 
+                    padding: 20px; 
+                    background-color: burlywood; 
+                    color: white;
+                    font-size: 20px;
+                    text-decoration: none;
+                    border-radius: 20px;">Go to Grid box</a>
+        </header>
+        <main>
+            <div class="maincontainer">
+                <div class="sedanbox">
+                    <img src="icon-sedans.svg" alt="sedanbox icon">
+                    <h2>SEDANS</h2>
+                    <p>Choose a sedan for its affordability and excellent fuel economy. 
+                        Ideal for cruising in the city or on your next road trip.</p>
+                        <button style="color: var(--orange);">Learn More</button>
+                </div>
+                <div class="suvsbox">
+                    <img src="icon-suvs.svg" alt="suvsbox icon">
+                    <h2>SUVS</h2>
+                    <p>Take a SUV for its spacious interior, power, and versatility. Perfect
+                        for your next family vacation and offroad adventures.
+                    </p>
+                    <button style="color: var(--aqua);">Learn More</button>
+                </div>
+                <div class="luxurybox">
+                    <img src="icon-luxury.svg" alt="luxurybox icon">
+                    <h2>LUXURY</h2>
+                    <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced 
+                        comfort of a luxury rental and arrive in style.
+                    </p>
+                    <button style="color: var(--darkgreen);">Learn More</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
